@@ -1,0 +1,15 @@
+{
+  "name": "electron-mail-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Erik Vanderlei Fernandes <erik.vanderlei.programador@outlook.com> (http://erikprogramador.com.br)",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.6.2"
+  }
+}
