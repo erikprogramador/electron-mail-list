@@ -6,8 +6,9 @@ let win = null;
 
 function createNewWindow () {
   win = new BrowserWindow({
-    width: 800,
-    height: 800
+    width: 1000,
+    height: 800,
+    icon: path.join(__dirname, 'images/email.png')
   });
 
   win.loadURL(url.format({
@@ -15,6 +16,8 @@ function createNewWindow () {
     protocol: 'file:',
     slashes: true
   }));
+
+  win.webContents.openDevTools();
 
   app.on('closed', () => win = null);
 }

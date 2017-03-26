@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mailApp">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mail List</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <h1>Hello from electron <strong id="version"></strong></h1>
+  <div ng-controller="MailController">
+    <h1>{{ title }}</h1>
+    <div>
+      <button ng-click="openFile()">Select The CSV</button>
+    </div>
 
-  <script>
-    document.querySelector('#version').innerHTML = process.version.electron;
-  </script>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>E-mail</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Erik</td>
+          <td>erik@example.com</td>
+          <td>Active</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
