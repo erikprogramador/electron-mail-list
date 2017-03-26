@@ -11,6 +11,8 @@ function createNewWindow () {
     icon: path.join(__dirname, 'images/email.png')
   });
 
+  win.setMenu(null);
+
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
