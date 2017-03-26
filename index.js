@@ -17,7 +17,7 @@ function createNewWindow () {
     slashes: true
   }));
 
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
 
   app.on('closed', () => win = null);
 }
