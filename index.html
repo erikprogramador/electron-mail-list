@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="mailApp">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,9 @@
 </head>
 <body>
   <div ng-controller="MailController">
-    <h1>{{ title }}</h1>
+    <div id="error"></div>
     <div>
-      <button ng-click="openFile()">Select The CSV</button>
+      <button id="select">Select The CSV</button>
     </div>
 
     <table>
@@ -21,17 +21,11 @@
           <th>Status</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Erik</td>
-          <td>erik@example.com</td>
-          <td>Active</td>
-        </tr>
+      <tbody id="list">
       </tbody>
     </table>
   </div>
 
-  <script src="node_modules/angular/angular.js"></script>
   <script src="scripts/script.js"></script>
 </body>
 </html>
